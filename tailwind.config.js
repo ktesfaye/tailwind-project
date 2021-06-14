@@ -8,14 +8,23 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: { 'xl': '0px 0px 15px 15px rgba(0, 0, 0, 0.12)'},
-      backgroundPosition:{
-        right: '900px 100px',
-      }
+      backgroundPosition:{right: '900px 100px'},
+      animation: {
+        fadeIn: "fadeIn 2s ease-in forwards"
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 }
+        }
+      },
       
     },
   },
   variants: {
-    extend: {},
+    animation: ["motion-safe"],
+    extend: {
+    },
   },
   plugins: [],
 }
